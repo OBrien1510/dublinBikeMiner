@@ -1,6 +1,7 @@
 import requests
 import json
 import time
+import datetime
 
 def main():
     
@@ -10,7 +11,7 @@ def main():
         
         print("collecting:",count)
         
-        file = open("/hugh/home/30670/Project/dublinbikedata.txt", w)
+        file = open("/home/hugh/30670/Project/dublinbikedata.txt", "a")
         
         link = "https://api.jcdecaux.com/vls/v1/stations?contract=Dublin&&apiKey=4dc48c410fefd7a42d52cdc4a9c6eb7ce0f67ae0"
         
@@ -18,9 +19,13 @@ def main():
         
         data = r.text
         
-        parsed = json.loads(data)
+        title = "period: "+ str(count) + " ----------------------------"
         
-        file.write(parsed)
+        #parsed = json.loads(data)
+        file.write(title)
+        file.write(data)
+        
+        file.close()
         
         time.sleep(300)
         
