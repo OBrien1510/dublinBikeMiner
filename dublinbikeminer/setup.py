@@ -35,7 +35,7 @@ setup(
     description="A script used to datamine the JCDecaux API for Dublin Bike data",
     entry_points={
         'console_scripts': [
-            'dublinbikeminer=dublinbikeminer.cli:main',
+            'miner=dublinbikeminer.dublinbikeminer:main',
         ],
     },
     install_requires=requirements,
