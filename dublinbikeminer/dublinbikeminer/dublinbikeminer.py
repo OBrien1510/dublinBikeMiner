@@ -6,7 +6,7 @@ def main():
     
     while True:
         
-        time.sleep(300)
+        
         
         file = open("/hugh/home/30670/project/dublinbikedata.txt", w)
         
@@ -19,6 +19,8 @@ def main():
         parsed = json.loads(data)
         
         file.write(parsed)
+        
+        time.sleep(300)
         
         #print(json.dumps(parsed, indent=4))
         
