@@ -22,6 +22,9 @@ def main():
         title = "period: "+ str(count) + " ----------------------------"
         
         #parsed = json.loads(data)
+        
+        return json.loads(data)
+        
         file.write(title)
         file.write(data)
         
@@ -35,4 +38,20 @@ def main():
         
     
 
-main()
+def dataReturn():
+    
+    while True:
+        
+        link = "https://api.jcdecaux.com/vls/v1/stations?contract=Dublin&&apiKey=4dc48c410fefd7a42d52cdc4a9c6eb7ce0f67ae0"
+        
+        r = requests.get(link)
+        
+        data = r.text
+        
+        title = "period: "+ str(count) + " ----------------------------"
+        
+        #parsed = json.loads(data)
+        
+        return json.loads(data)
+    
+        time.sleep(300)
