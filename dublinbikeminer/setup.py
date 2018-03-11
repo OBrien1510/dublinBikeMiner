@@ -36,6 +36,7 @@ setup(
     entry_points={
         'console_scripts': [
             'miner=dublinbikeminer.dublinbikeminer:main',
+            'flaskapp=dublinbikeminer.flaskapp:main'
         ],
     },
     install_requires=requirements,

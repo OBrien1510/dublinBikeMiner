@@ -48,8 +48,6 @@ def dataReturn():
         
         data = r.text
         
-        title = "period: "+ str(count) + " ----------------------------"
-        
         #parsed = json.loads(data)
         
         return json.loads(data)
